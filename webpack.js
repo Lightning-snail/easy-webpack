@@ -39,7 +39,7 @@
 
     // console.log('deps', deps);                    // 打印结果:deps { './add.js': 'src/add.js', './minus.js': 'src/minus.js' }
     const babel = require('@babel/core')
-    const {code} = babel.transformFromAst(ast, null, {  // 将ast转换成es5可执行代码
+    const {code} = babel.transformFromAst(ast, null, {  // 将ast转换成es5可执行代码 //这里执行的就是webpack的loader Compiler
       presets: ['@babel/preset-env']
     })
 
